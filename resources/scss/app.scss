@@ -1,0 +1,646 @@
+@import 'variables';
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $default-color;
+}
+
+nav, div, section, img {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+// Utilities
+.text-white {
+    color: white;
+}
+
+.nav {
+    position: fixed;
+    top: -1px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 40px;
+    background-color: transparent;
+    width: 100%;
+    height: 120px;
+    z-index: 10;
+    transition: 0.2s ease-in-out;
+}
+.nav-container {
+    display: flex;
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    white-space: nowrap;
+    font-size: 18pt;
+    font-weight: 200;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+.nav-link:hover {
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+.nav-brand {
+    padding: 2px 20px;
+}
+.nav-scrolled {
+    background-color: $default-color;
+    box-shadow: 0 0 4px 4px rgb(57, 57, 57, 0.1);
+    transition: 0.2s ease-in-out;
+}
+.nav-button {
+    display: flex;
+    align-items: center;
+    font-size: 17pt;
+    background-color: #15548D;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 32px;
+}
+.nav-button-flag {
+    width: auto;
+    height: auto;
+    margin-right: 12px;
+}
+.nav-button-arrow {
+    width: auto;
+    height: auto;
+    margin-left: 12px;
+}
+
+.container {
+    height: 100vh;
+    padding: 80px 120px;
+    display: flex;
+}
+
+// Section 1
+.s1 {
+    background-image: url("/public/libs/app/assets/img/bg_main_p1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0;
+    align-items: center;
+    height: 90vh;
+}
+.s1 .section-content {
+    padding: 100px 0 100px 120px;
+}
+.s1 .section-image {
+    height: 100%;
+    width: auto;
+    align-self: flex-start;
+}
+.s1 .section-addon {
+    position: absolute;
+    left: 30px;
+    bottom: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.s1 .section-addon p {
+    font-size: 24px;
+    rotate: 90deg;
+    margin: 30px 10px;
+    font-weight: 200;
+}
+.s1 .section-addon img {
+    width: 28px;
+}
+
+// Section 2
+.s2 {
+    background-image: url("/public/libs/app/assets/img/workflow.png");
+    background-repeat: no-repeat;
+    background-size: 90% auto;
+    padding: 0;
+    height: 90vh;
+    padding: 0 120px 80px 120px;
+}
+
+// Section 3
+.s3 {
+    background-color: #F7F8FD;
+    background-image: url("/public/libs/app/assets/img/vector_s3.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 0;
+    height: 90vh;
+    padding: 120px;
+}
+.s3 .section-content {
+    width: 100%;
+}
+.s3 .content-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+.s3 .content-list .card {
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 1 / 1;
+    width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    padding: 50px;
+    background-color: white;
+}
+.s3 .card .card-head {
+    display: flex;
+    justify-content: space-between;
+}
+.s3 .card img {
+    width: 200px;
+    height: 200px;
+}
+.s3 .card .number {
+    color: $default-bg-color;
+    font-size: 32pt;
+    font-weight: 600;
+    margin: 0;
+    line-height: 30px;
+}
+.s3 .card .card-title {
+    margin: 12px 0 24px 0;
+    font-size: 26pt;
+    font-weight: 500;
+}
+.s3 .card .card-button {
+    display: flex;
+    align-items: center;
+    padding: 12px 40px;
+    margin: auto auto 0 0;
+    background-color: $default-bg-color;
+    border: none;
+    border-radius: 50px;
+    transition: 0.2s ease-in-out;
+}
+.s3 .card .card-button:hover {
+    background-color: $default-bg-color-hover;
+    transition: 0.2s ease-in-out;
+}
+.s3 .card .card-button p {
+    font-size: 18pt;
+    margin: 0 12px 0 0;
+}
+.s3 .card .card-button img {
+    width: 40px;
+    height: 40px;
+}
+
+// Section 4
+.s4 {
+    justify-content: center;
+    height: fit-content;
+    padding: 120px;
+}
+.s4 .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.s4 .content-head {
+    justify-content: center;
+}
+.s4 .content-title {
+    margin: 32px 0;
+}
+.s4 .splide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 80px 120px;
+    display: flex;
+    justify-content: space-between;
+}
+.s4 .splide-overlay-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.s4 .overlay-head {
+    font-size: 22pt;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.s4 .overlay-title {
+    font-size: 53pt;
+    margin: 24px 0 4px 0;
+    font-weight: 600;
+}
+.s4 .overlay-description {
+    font-size: 32pt;
+    font-weight: 300;
+}
+.s4 .splide-overlay-right {
+    display: flex;
+    height: 40px;
+    margin-top: auto;
+}
+.s4 .overlay-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.s4 .overlay-action img {
+    width: 80px!important;
+    height: 80px!important;
+    margin-right: 30px;
+}
+.s4 .overlay-action span {
+    font-size: 28pt;
+}
+.s4 .splide {
+    width: 100%;
+    margin-top: 60px;
+}
+.s4 .splide img {
+    object-fit: fill;
+    height: 500px;
+}
+.s4 .splide__arrow--next {
+    right: -55px;
+    width: 110px;
+    height: 110px;
+    opacity: 1!important;
+    background-color: $default-bg-color;
+}
+.s4 .splide__arrow--prev {
+    left: -55px;
+    width: 110px;
+    height: 110px;
+    opacity: 1!important;
+    background-color: $default-bg-color;
+}
+.s4 .splide__arrow svg {
+    width: 40px;
+    height: 40px;
+}
+
+// Section 5
+.s5 {
+    background-color: #F7F8FD;
+    padding: 0;
+    height: 70vh;
+}
+.s5 .section-content {
+    padding: 100px 0 100px 200px;
+}
+.s5 .section-image {
+    height: 100%;
+    width: auto;
+    align-self: flex-start;
+}
+.s5 .content-quote {
+    display: flex;
+}
+.s5 .content-quote img {
+    width: 60px;
+    height: 60px;
+    margin: 0 24px 0 32px;
+}
+.s5 .content-quote p {
+    margin: 0;
+    font-size: 26pt;
+    font-weight: 300;
+    padding-right: 200px;
+}
+.s5 .content-quotee {
+    display: flex;
+    margin-top: 80px;
+}
+.s5 .content-quotee img {
+    width: 110px;
+    height: 110px;
+    margin: 0 24px 0 0;
+}
+.s5 .content-quotee p {
+    margin: 0;
+    font-size: 26pt;
+    font-weight: 300;
+    padding-right: 200px;
+}
+.s5 .quotee-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.s5 .quotee-desc .quotee-name {
+    font-size: 27pt;
+    font-weight: 600;
+}
+.s5 .quotee-desc .quotee-job {
+    font-size: 27pt;
+    font-weight: 300;
+}
+.s5 .splide {
+    margin: auto 0 auto auto;
+}
+.s5 .splide img {
+    width: auto;
+    height: 100%;
+}
+.s5 .splide__arrow--next {
+    top: 23%;
+    left: 0px;
+    width: 110px;
+    height: 110px;
+    opacity: 1!important;
+    background-color: $default-bg-color;
+    border-radius: 0 100% 100% 0;
+}
+.s5 .splide__arrow--prev {
+    top: 23%;
+    left: -109px;
+    width: 110px;
+    height: 110px;
+    opacity: 1!important;
+    background-color: $default-bg-color;
+    border-radius: 100% 0 0 100%;
+}
+.s5 .splide__arrow svg {
+    width: 40px;
+    height: 40px;
+}
+
+// Section 6
+.s6 {
+    background-image: url("/public/libs/app/assets/img/vector_s6.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    padding: 0;
+    align-items: center;
+    height: 80vh;
+}
+.s6 .section-content {
+    flex: 1;
+    padding: 100px 80px 100px 200px;
+}
+.s6 .content-description {
+    margin-top: 24px;
+}
+.s6 .section-form {
+    flex: 1;
+    padding-right: 200px;
+}
+.s6 form {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    border-radius: 50px;
+    background-color: #F8F8F8;
+}
+.s6 form label {
+    font-size: 17pt;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.s6 form input {
+    border: 1px solid #CCCCCC;
+    border-radius: 20px;
+    font-size: 16pt;
+    padding: 20px;
+    margin-bottom: 32px;
+}
+.s6 form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 40px;
+    margin: auto auto 0 0;
+    background-color: $default-bg-color;
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    transition: 0.2s ease-in-out;
+}
+.s6 form button:hover {
+    background-color: $default-bg-color-hover;
+    transition: 0.2s ease-in-out;
+}
+.s6 form button p {
+    font-size: 18pt;
+    font-weight: 600;
+    margin: 0 12px 0 0;
+}
+.s6 form button img {
+    width: 40px;
+    height: 40px;
+}
+
+.content-head {
+    display: flex;
+    align-items: center;
+}
+.content-head .head-rectangle {
+    width: auto;
+    height: auto;
+}
+.content-head p {
+    margin: 0 16px;
+    text-transform: uppercase;
+    font-size: 16pt;
+    font-weight: 600;
+}
+.content-title {
+    margin: 12px 0 20px 0;
+    font-size: 38pt;
+    font-weight: 600;
+    max-width: 800px;
+}
+.content-separator {
+    width: 180px;
+    height: auto;
+}
+.content-description {
+    margin-bottom: 28px;
+    font-size: 22pt;
+    font-weight: 200;
+}
+.content-button {
+    padding: 20px 60px;
+    font-size: 26px;
+    font-weight: 600;
+    background-color: $default-bg-color;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.content-button:hover {
+    background-color: $default-bg-color-hover;
+    transition: 0.2s ease-in-out;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-image: url("/public/libs/app/assets/img/footer_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 700px;
+    padding: 120px;
+}
+.footer-brand {
+    width: 300px;
+    height: auto;
+}
+.footer-category {
+    display: flex;
+    margin-top: 80px;
+}
+.footer-category-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.footer-item-head {
+    font-size: 21pt;
+    font-weight: 600;
+    margin-bottom: 32px;
+    color: white;
+}
+.footer-item {
+    font-size: 21pt;
+    font-weight: 200;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: white;
+}
+.footer-social {
+    display: flex;
+    align-items: center;
+}
+.footer-social-item {
+    text-decoration: none;
+    margin-right: 16px;
+}
+.footer-social-item img {
+    width: 60px;
+    height: auto;
+}
+.footer-divider {
+    width: 100%;
+    height: auto;
+    margin: 60px 0;
+}
+.footer-utils {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-snk {
+    display: flex;
+    flex-direction: column;
+    text-decoration: underline;
+}
+.footer-snk a {
+    color: white;
+    font-size: 21pt;
+    font-weight: 200;
+}
+.footer-lang {
+    display: flex;
+    align-items: center;
+}
+.footer-lang img {
+    height: 70px;
+    width: auto;
+    margin-right: 32px;
+}
+.footer-lang button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #29679F;
+    color: white;
+    padding: 20px 36px;
+    font-size: 20pt;
+    border: none;
+    border-radius: 50px;
+    width: 400px;
+}
+.footer-lang button img {
+    height: auto;
+    width: auto;
+    margin: 0;
+}
+.footer-copyright {
+    margin-top: auto;
+    color: white;
+    font-size: 22pt;
+    font-weight: 200;
+}
+
+// Dropdown
+.dropbtn {
+    background-color: #29679F;
+    color: white;
+    padding: 20px 36px;
+    font-size: 20pt;
+    border: none;
+    border-radius: 50px;
+    width: 500px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    z-index: 1;
+}
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.updown {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.dropdown:hover>.dropbtn .updown {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
